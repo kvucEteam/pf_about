@@ -1,7 +1,7 @@
  var gulp = require('gulp'),
      gutil = require('gulp-util'),
      gulpif = require('gulp-if'),
-     uglify = require('gulp-uglify'),
+     //uglify = require('gulp-uglify'),
      connect = require('gulp-connect'),
      minifyCSS = require('gulp-minify-css'),
      minifyHTML = require('gulp-minify-html'),
@@ -37,13 +37,13 @@
      gulp.src(jsSources)
          //.on('error', swallowError)
          .pipe(concat("vendor_scripts.js"))
-         .pipe(uglify())
+         //.pipe(uglify())
          //.pipe(gulpif(env === 'production', uglify()))
          .pipe(gulp.dest('objekter/development/library'))
 
      gulp.src('components/shared_functions.js')
          .pipe(concat("custom_scripts.js"))
-         .pipe(uglify())
+         //.pipe(uglify())
          //.pipe(gulpif(env === 'production', uglify()))
          .pipe(gulp.dest('objekter/development/library'))
          .pipe(connect.reload())
@@ -105,7 +105,7 @@
          .pipe(gulp.dest('objekter/production/'))
 
      gulp.src("objekter/production/**/*.js")
-         .pipe(uglify())
+         //.pipe(uglify())
          .pipe(gulp.dest('objekter/production/'))
 
      gutil.log("all done");
