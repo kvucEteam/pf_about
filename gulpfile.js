@@ -7,14 +7,11 @@
      minifyHTML = require('gulp-minify-html'),
      concat = require('gulp-concat'),
      jshint = require('gulp-jshint'),
-     wait = require('gulp-wait'),
      ftp = require('vinyl-ftp');
 
- var env,
-     jsSources,
-     htmlSources,
+ var jsSources,
      cssSources,
-     //outputDir;
+
 
 
      jsSources = [
@@ -22,11 +19,11 @@
          'bower_components/jquery-ui/jquery-ui.js',
          'bower_components/bootstrap/dist/js/bootstrap.js',
          'bower_components/jquery-ui-touch-punch/jquery.ui.touch-punch.js',
-     ];
+     ],
 
- cssSources = [
-     'components/*.css'
- ];
+     cssSources = [
+         'components/*.css'
+     ];
 
 
  gulp.task('log', function() {
@@ -112,13 +109,16 @@
      gutil.log("all done");
  });
 
+
+ // Deploy production folder to ftp server: 
+
  gulp.task('deploy', function() {
 
      var conn = ftp.create({
          host: 'eundervisning-wp.dk',
          user: 'eundervisning-wp.dk',
          password: 'fronter1',
-         parallel: 8,
+         parallel: 3,
          log: gutil.log
      });
 
@@ -132,16 +132,21 @@
          '*.*'
      ];
 
-gutil.log();
+     gutil.log();
      // using base = '.' will transfer everything to /public_html correctly 
      // turn off buffering in gulp.src for best performance 
 
-     
-       return gulp.src( globs, { cwd: 'objekter/production/**', buffer: false } )
-            .pipe( conn.newer( '/public_html/vinyl-test' ) ) // only upload newer files 
-            .pipe( conn.dest( '/public_html/vinyl-test' ) );
-     
+
+     return gulp.src(globs, {
+             cwd: 'objekter/production/**',
+             buffer: false
+         })
+         .pipe(conn.newer('/public_html/vinyl-test')) // only upload newer files 
+         .pipe(conn.dest('/public_html/vinyl-test'));
+
  });
+
+ //Hold øje med ændringer i html, css og js filer --> reload og concat (js / css): 
 
  gulp.task('watch', function() {
      gulp.watch(['objekter/development/**/*.js', 'objekter/development/**/*.html', 'objekter/development/**/*.css'], ['reload']);
