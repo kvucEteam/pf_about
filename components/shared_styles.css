@@ -1,0 +1,19 @@
+.QuestionTask {
+    color:black;
+}
+.TaskNumberImg{
+	width: 20px; 
+	margin-bottom: 3px;
+}
+.CapitalI{font-family: "Merriweather"; font-weight: 200;}
+
+.new_window_link{
+	font-size: 12px;
+}
+.footerCopywrite {
+	margin:50px 0 20px 0;
+	text-align: center;
+}
+.footerCopywrite a {
+	color: #777;
+}
