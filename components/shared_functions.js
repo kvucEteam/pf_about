@@ -252,6 +252,8 @@ function shuffle_Array(o) {
     return o;
 }
 
+
+// hvis objektet ligger i en frame, 
 $(document).ready(function() {
 
     var isInIFrame = (window.location != window.parent.location);

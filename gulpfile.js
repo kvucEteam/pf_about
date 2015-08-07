@@ -103,7 +103,7 @@
          .pipe(gulp.dest('objekter/production/'))
 
      gulp.src("objekter/production/**/*.js")
-         .pipe(uglify())
+        // .pipe(uglify())
          //.pipe(gulp.dest('objekter/production/'))
 
      gutil.log("all done");
