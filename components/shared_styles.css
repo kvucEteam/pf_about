@@ -43,3 +43,21 @@
     z-index: 10;
     /*margin-top: -20px;*/
 }
+.CloseClass {
+    margin-top: -15px;
+    margin-right: -15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.CapitalI {
+    font-family: "Georgia";
+    font-weight: 100;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
