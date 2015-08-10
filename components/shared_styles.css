@@ -1,3 +1,5 @@
+
+
 .QuestionTask {
     color:black;
 }
@@ -42,4 +44,32 @@
     width: 100%;
     z-index: 10;
     /*margin-top: -20px;*/
+}
+
+
+/* ========================================================================================
+      Nedenstående overført fra shared_functions_styles.css af THAN d. 10-08-2015
+======================================================================================== */
+
+
+.CloseClass {
+    margin-top: -15px;
+    margin-right: -15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.OverlayTextContainer {
+    max-width: 1164px;
 }
