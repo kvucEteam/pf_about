@@ -63,10 +63,11 @@
 }
 
 
-/* ========================================================================================
-      Nedenstående overført fra shared_functions_styles.css af THAN d. 10-08-2015
-======================================================================================== */
+/* ===================================================================================================================================
+      Nedenstående overført fra shared_functions_styles.css styles.css fra det gamle Engelsk B workflow, THAN d. 10-08-2015
+=================================================================================================================================== */
 
+/* ==========  UserMsgBox  ========== */
 
 .clear {
     clear: both;
@@ -75,3 +76,61 @@
 .OverlayTextContainer {
     max-width: 1164px;
 }
+
+/* ==========  Indlejring  ========== */
+
+.embedToggle {
+    margin-top: 8px;
+}
+
+.tabcontainer {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.tab {
+    padding: 0px 5px;
+    border-radius: 2px;
+    float: left;
+     background-color: #eee;
+    color: #222;
+    cursor:pointer;
+}
+
+.togglecontainer {
+    clear: both;
+    background-color: white;
+    border: 1px solid #eee;
+    padding: 4px;
+}
+
+.embedtext {
+    width: 100%;
+    margin-top: -8px;
+}
+
+.activetab {
+    background-color: white;
+}
+
+/* ==========  footer()  ========== */
+
+.container .vuc_footer {
+    margin-top: 0;
+}
+.vuc_footer {
+    background-color: #f8f8f6;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+.vuc_footer{margin-top: 20px; padding-top: 30px; padding-bottom: 30px; background-color: #f8f8f6;}
+.vuc_footer h2 {margin-top: 0px; margin-bottom: 20px; padding: 0px;}
+.footerText{margin: 0px; color: #666;}
+.footerCopywrite{margin-top: 20px; margin-bottom: 0px;}
+
+
+
