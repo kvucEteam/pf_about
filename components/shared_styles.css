@@ -61,3 +61,17 @@
 .right {
     float: right;
 }
+
+
+/* ========================================================================================
+      Nedenstående overført fra shared_functions_styles.css af THAN d. 10-08-2015
+======================================================================================== */
+
+
+.clear {
+    clear: both;
+}
+
+.OverlayTextContainer {
+    max-width: 1164px;
+}
