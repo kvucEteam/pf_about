@@ -25,6 +25,8 @@
          'components/*.css'
      ];
 
+     //  måske skal vi ind og styre rækkefølgen af css filer --> concat
+
 
  gulp.task('log', function() {
      gutil.log("Hej fra loggen");
@@ -141,8 +143,8 @@
              cwd: 'objekter/production/**',
              buffer: false
          })
-         .pipe(conn.newer('/public_html/vinyl-test')) // only upload newer files 
-         .pipe(conn.dest('/public_html/vinyl-test'));
+         .pipe(conn.newer('/public_html/')) // only upload newer files 
+         .pipe(conn.dest('/public_html/'));
 
  });
 
