@@ -25,7 +25,7 @@
          'components/*.css'
      ];
 
-     //  måske skal vi ind og styre rækkefølgen af css filer --> concat
+ //  måske skal vi ind og styre rækkefølgen af css filer --> concat
 
 
  gulp.task('log', function() {
@@ -96,16 +96,18 @@
      gulp.src("objekter/production/**/*.css")
          //.pipe(wait(1500))
          .pipe(minifyCSS({
-             keepBreaks: false,
+             keepBreaks: false
          }))
          .pipe(gulp.dest('objekter/production/'))
 
      gulp.src("objekter/production/**/*.html")
-         .pipe(minifyHTML())
+         .pipe(minifyHTML({
+             quotes: true
+         }))
          .pipe(gulp.dest('objekter/production/'))
 
      gulp.src("objekter/production/**/*.js")
-        // .pipe(uglify())
+         // .pipe(uglify())
          //.pipe(gulp.dest('objekter/production/'))
 
      gutil.log("all done");
