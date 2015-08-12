@@ -29,11 +29,11 @@ function embedlink(obj) {
     UrlVarStr = String(window.location).split("/", 3).join("/").replace("http", "https");
     console.log("embedlink - UrlVarStr: " + UrlVarStr);
 
-    var HrefObj = obj.parent().parent().find("a").eq(0).attr("href").replace("../../../", "");
+    var HrefObj = obj.parent().parent().find("a").eq(0).attr("href").replace("../", "/");
     console.log("embedlink - HrefObj: " + HrefObj);
 
-    var embedFronter = '<iframe height="570" width="820" src="' + UrlVarStr + '/pf_kem2015/' + HrefObj + '"></iframe>';
-    var embedMoodle = '<embed height="670" width="970" src="' + UrlVarStr + '/pf_kem2015/' + HrefObj + '"></embed>';
+    var embedFronter = '<iframe height="570" width="820" src="' + UrlVarStr + HrefObj + '"></iframe>';
+    var embedMoodle = '<embed height="670" width="970" src="' + UrlVarStr + HrefObj + '"></embed>';
 
     // var embedFronter = '<iframe height="570" width="820" src="http://eundervisning-wp.dk/pf_kem2015/' + obj.parent().parent().find("a").eq(0).attr("href") + '"></iframe>';
     // var embedMoodle = '<embed height="670" width="970" src="http://eundervisning-wp.dk/pf_kem2015/' + obj.parent().parent().find("a").eq(0).attr("href") + '"></embed>';
