@@ -154,7 +154,8 @@
 
  gulp.task('watch', function() {
      gulp.watch(['objekter/development/**/*.js', 'objekter/development/**/*.html', 'objekter/development/**/*.css'], ['reload']);
-     gulp.watch(['components/*.js', 'components/*.css'], ['reload', 'js', 'css']);
+     gulp.watch(['components/*.css'], ['reload', 'css']);
+     gulp.watch(['components/*.js'], ['reload', 'js']);
 
  });
 
@@ -167,4 +168,4 @@
      gutil.log("Hej fra connect");
  });
 
- gulp.task('default', ['js', 'connect', 'css', 'watch', 'log']);
+ gulp.task('default', ['js', 'connect', 'watch', 'log']);
