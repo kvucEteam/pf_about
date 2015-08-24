@@ -145,7 +145,7 @@
              cwd: 'objekter/production/**',
              buffer: false
          })
-         .pipe(conn.newer('/public_html/')) // only upload newer files 
+         .pipe(conn.differentSize('/public_html/')) // only upload newer files 
          .pipe(conn.dest('/public_html/'));
 
  });
