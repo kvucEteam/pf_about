@@ -1,6 +1,6 @@
 #!/bin/bash
 sep='---------------'
-for d in objekter/development/*; do
+for d in ../objekter/development/*; do
 	df=${d##*/}  # extracting the folder-names
 	# echo $d
 	# echo $df
