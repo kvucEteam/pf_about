@@ -562,3 +562,9 @@ $(document).ready(function() {
         $("h1").append("<a class='new_window_link' href='" + window.location.href + "' target='_blank'><span class='glyphicon glyphicon-new-window'></span>Åbn i nyt vindue</a>");
     }
 });
+
+// Her kan man se hvilke browsere der understøtter favicons:
+//      https://en.wikipedia.org/wiki/Favicon
+function AddFavicon(){
+    $('head').append('<link type="image/x-icon" rel="shortcut icon" href="../library/img/testFavicon.ico" />');
+}
