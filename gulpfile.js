@@ -8,7 +8,7 @@
      concat = require('gulp-concat'),
      jshint = require('gulp-jshint'),
      ftp = require('vinyl-ftp');
-
+     
  var jsSources,
      cssSources,
 
@@ -72,8 +72,10 @@
  });
 
 
- gulp.task('copy_production', function(variab) {
-     gutil.log(variab);
+
+//ALT DER VEDRØRER PRODUCTION, TRIMMING OG DEPLOYMENT:
+ gulp.task('copy_production', function() {
+     
      //gutil.log("Its time to production mode it!");
      //objekter/kemi_drag/builds/development/
      gulp.src(['objekter/development/**/*'])
