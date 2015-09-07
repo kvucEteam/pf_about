@@ -8,11 +8,9 @@
      concat = require('gulp-concat'),
      jshint = require('gulp-jshint'),
      ftp = require('vinyl-ftp');
-
+     
  var jsSources,
      cssSources,
-
-
 
      jsSources = [
          'bower_components/jquery/dist/jquery.js',
@@ -37,13 +35,13 @@
      gulp.src(jsSources)
          //.on('error', swallowError)
          .pipe(concat("vendor_scripts.js"))
-         .pipe(uglify())
+         //.pipe(uglify())
          //.pipe(gulpif(env === 'production', uglify()))
          .pipe(gulp.dest('objekter/development/library'))
 
      gulp.src('components/shared_functions.js')
          .pipe(concat("custom_scripts.js"))
-         .pipe(uglify())
+         //.pipe(uglify())
          //.pipe(gulpif(env === 'production', uglify()))
          .pipe(gulp.dest('objekter/development/library'))
          .pipe(connect.reload())
@@ -74,7 +72,10 @@
  });
 
 
+
+//ALT DER VEDRØRER PRODUCTION, TRIMMING OG DEPLOYMENT:
  gulp.task('copy_production', function() {
+     
      //gutil.log("Its time to production mode it!");
      //objekter/kemi_drag/builds/development/
      gulp.src(['objekter/development/**/*'])
@@ -107,7 +108,7 @@
          .pipe(gulp.dest('objekter/production/'))
 
      gulp.src("objekter/production/**/*.js")
-         // .pipe(uglify())
+         .pipe(uglify())
          //.pipe(gulp.dest('objekter/production/'))
 
      gutil.log("all done");

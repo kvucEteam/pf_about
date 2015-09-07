@@ -49,6 +49,7 @@ function one_line_footer() {
     ga('create', 'UA-62686407-1', 'auto');
     ga('send', 'pageview');
     //console.log("GA COMPLETE");
+    
 }
 
 /// INDLEJRINGS    FUNKTIONALITET  ///////
