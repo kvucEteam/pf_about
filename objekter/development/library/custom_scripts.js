@@ -61,6 +61,7 @@ function embedlink(obj) {
 
     var UrlVarStr;
     // UrlVarStr = String(window.location).split("/", 3).join("/").replace("http", "https");  // Udkommenteret af THAN d. 8/9-2015 da vi er gået over på vucdigital.dk som køre https.
+    UrlVarStr = String(window.location).split("/", 3).join("/");
     console.log("embedlink - UrlVarStr: " + UrlVarStr);
 
     var HrefObj = obj.parent().parent().find("a").eq(0).attr("href").replace("../", "/");
