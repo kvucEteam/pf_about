@@ -32,7 +32,7 @@ function footer() {
 function one_line_footer() {
     //$('.container, .container-fluid').append('<div class="col-xs-12"><h6 class="footerCopywrite"> <a href="../../../kemiC_visningsite/builds/development/om_projektet.html">Digitale læringsmaterialer  Copyright 2015</a></h6></div>')
   // $(".container, .container-fluid").append("<div class='col-xs-12'><h6 class='footerCopywrite'> <a href='../pf_kem2015/om_projektet.html'>Digitale læringsmaterialer  Copyright 2015</a></h6></div>");
-  $(".container, .container-fluid").append("<div class='col-xs-12'><h6 class='footerCopywrite'> <a href='../pf_about/pf_about.html'>Digitale læringsmaterialer  Copyright 2015</a></h6></div>");
+  $(".container, .container-fluid").append("<div class='col-xs-12'><h6 class='footerCopywrite'> <a href='../pf_about/index.html'>Digitale læringsmaterialer  Copyright 2015</a></h6></div>");
 
   //$(".container, .container-fluid").append("<div class='col-xs-12 vuc_footer'><h2>Digitale læringsmaterialer på voksenuddannelser</h2><h6 class='footerText'>Udviklet af et produktionsfællesskab mellem otte VUC’er til anvendelse på de deltagende skoler: <br/> Hf og VUC Nordsjælland, VUC Hvidovre-Amager, VUC Roskilde, VUC Vestegnen, VUF, VUC Storstrøm, VUC Aarhus og Københavns VUC (KVUC).</h6> <h6 class='footerCopywrite'> Copyright 2015 </h6></div >");
     (function(i, s, o, g, r, a, m) {
@@ -60,7 +60,7 @@ function embedlink(obj) {
     // alert($(".tab").length);
 
     var UrlVarStr;
-    UrlVarStr = String(window.location).split("/", 3).join("/").replace("http", "https");
+    // UrlVarStr = String(window.location).split("/", 3).join("/").replace("http", "https");  // Udkommenteret af THAN d. 8/9-2015 da vi er gået over på vucdigital.dk som køre https.
     console.log("embedlink - UrlVarStr: " + UrlVarStr);
 
     var HrefObj = obj.parent().parent().find("a").eq(0).attr("href").replace("../", "/");
